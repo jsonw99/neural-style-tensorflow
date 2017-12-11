@@ -1,0 +1,95 @@
+> python my_neural_style.py --content_img golden_gate.jpg --style_imgs starry-night.jpg --max_size 1000  --max_iterations 100 --original_colors --device /cpu:0  --verbose
+
+---- RENDERING SINGLE IMAGE ----
+
+2017-12-10 15:23:24.001615: W C:\tf_jenkins\home\workspace\rel-win\M\windows\PY\35\tensorflow\core\platform\cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2017-12-10 15:23:24.001700: W C:\tf_jenkins\home\workspace\rel-win\M\windows\PY\35\tensorflow\core\platform\cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+
+BUILDING VGG-19 NETWORK
+loading model weights...
+constructing layers...
+LAYER GROUP 1
+--conv1_1 | shape=(1, 734, 979, 64) | weights_shape=(3, 3, 3, 64)
+--relu1_1 | shape=(1, 734, 979, 64) | bias_shape=(64,)
+--conv1_2 | shape=(1, 734, 979, 64) | weights_shape=(3, 3, 64, 64)
+--relu1_2 | shape=(1, 734, 979, 64) | bias_shape=(64,)
+--pool1   | shape=(1, 367, 490, 64)
+LAYER GROUP 2
+--conv2_1 | shape=(1, 367, 490, 128) | weights_shape=(3, 3, 64, 128)
+--relu2_1 | shape=(1, 367, 490, 128) | bias_shape=(128,)
+--conv2_2 | shape=(1, 367, 490, 128) | weights_shape=(3, 3, 128, 128)
+--relu2_2 | shape=(1, 367, 490, 128) | bias_shape=(128,)
+--pool2   | shape=(1, 184, 245, 128)
+LAYER GROUP 3
+--conv3_1 | shape=(1, 184, 245, 256) | weights_shape=(3, 3, 128, 256)
+--relu3_1 | shape=(1, 184, 245, 256) | bias_shape=(256,)
+--conv3_2 | shape=(1, 184, 245, 256) | weights_shape=(3, 3, 256, 256)
+--relu3_2 | shape=(1, 184, 245, 256) | bias_shape=(256,)
+--conv3_3 | shape=(1, 184, 245, 256) | weights_shape=(3, 3, 256, 256)
+--relu3_3 | shape=(1, 184, 245, 256) | bias_shape=(256,)
+--conv3_4 | shape=(1, 184, 245, 256) | weights_shape=(3, 3, 256, 256)
+--relu3_4 | shape=(1, 184, 245, 256) | bias_shape=(256,)
+--pool3   | shape=(1, 92, 123, 256)
+LAYER GROUP 4
+--conv4_1 | shape=(1, 92, 123, 512) | weights_shape=(3, 3, 256, 512)
+--relu4_1 | shape=(1, 92, 123, 512) | bias_shape=(512,)
+--conv4_2 | shape=(1, 92, 123, 512) | weights_shape=(3, 3, 512, 512)
+--relu4_2 | shape=(1, 92, 123, 512) | bias_shape=(512,)
+--conv4_3 | shape=(1, 92, 123, 512) | weights_shape=(3, 3, 512, 512)
+--relu4_3 | shape=(1, 92, 123, 512) | bias_shape=(512,)
+--conv4_4 | shape=(1, 92, 123, 512) | weights_shape=(3, 3, 512, 512)
+--relu4_4 | shape=(1, 92, 123, 512) | bias_shape=(512,)
+--pool4   | shape=(1, 46, 62, 512)
+LAYER GROUP 5
+--conv5_1 | shape=(1, 46, 62, 512) | weights_shape=(3, 3, 512, 512)
+--relu5_1 | shape=(1, 46, 62, 512) | bias_shape=(512,)
+--conv5_2 | shape=(1, 46, 62, 512) | weights_shape=(3, 3, 512, 512)
+--relu5_2 | shape=(1, 46, 62, 512) | bias_shape=(512,)
+--conv5_3 | shape=(1, 46, 62, 512) | weights_shape=(3, 3, 512, 512)
+--relu5_3 | shape=(1, 46, 62, 512) | bias_shape=(512,)
+--conv5_4 | shape=(1, 46, 62, 512) | weights_shape=(3, 3, 512, 512)
+--relu5_4 | shape=(1, 46, 62, 512) | bias_shape=(512,)
+--pool5   | shape=(1, 23, 31, 512)
+
+MINIMIZING LOSS USING: L-BFGS OPTIMIZER
+RUNNING THE L-BFGS-B CODE
+
+           * * *
+
+Machine precision = 2.220D-16
+ N =      2155758     M =           10
+ This problem is unconstrained.
+
+At X0         0 variables are exactly at the bounds
+
+At iterate    0    f=  2.05370D+11    |proj g|=  6.90003D+05
+
+At iterate   50    f=  2.33405D+09    |proj g|=  3.53666D+03
+
+At iterate  100    f=  1.41485D+09    |proj g|=  2.19850D+03
+
+           * * *
+
+Tit   = total number of iterations
+Tnf   = total number of function evaluations
+Tnint = total number of segments explored during Cauchy searches
+Skip  = number of BFGS updates skipped
+Nact  = number of active bounds at final generalized Cauchy point
+Projg = norm of the final projected gradient
+F     = final function value
+
+           * * *
+
+   N    Tit     Tnf  Tnint  Skip  Nact     Projg        F
+*****    102    111      1     0     0   2.006D+03   1.398D+09
+  F =   1398052992.00000
+
+STOP: TOTAL NO. of ITERATIONS EXCEEDS LIMIT
+
+ Cauchy                time 0.000E+00 seconds.
+ Subspace minimization time 0.000E+00 seconds.
+ Line search           time 0.000E+00 seconds.
+
+ Total User time 0.000E+00 seconds.
+
+Single image elapsed time: 2090.5646843910217
