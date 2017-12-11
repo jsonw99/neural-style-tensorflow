@@ -5,7 +5,7 @@ The code had been tested with python3.5.
 ### 1. preparation
 Download the [VGG-19 model weights](http://www.vlfeat.org/matconvnet/models/imagenet-vgg-verydeep-19.mat). And save it to the root folder of the project directory. 
 
-### 2. Rendering a single image
+### 2. rendering a single image
 ```bash
 python my_neural_style.py \
 --content_img golden_gate.jpg \
